@@ -36,7 +36,7 @@ npm install
 cnpm install
 ```
 
-##开始运行
+## 开始运行
 
 ```
 npm run dev
