@@ -1,0 +1,30 @@
+{
+  "name": "next-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.13.7",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "express": "^4.16.2",
+    "highcharts": "^6.0.2",
+    "next": "^4.1.0",
+    "nprogress": "^0.2.0",
+    "rc-animate": "^2.4.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0",
+    "react-highcharts": "^13.0.0",
+    "react-slick": "^0.15.4",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^2.2.1"
+  }
+}
