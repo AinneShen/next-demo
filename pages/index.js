@@ -52,6 +52,9 @@ export default class Index extends React.Component{
             <Link href="/form">表单</Link>
           </li>
           <li>
+            <Link href="/selfForm">自写表单</Link>
+          </li>
+          <li>
             <Link href="/dialog">
               <a>模态框</a>
             </Link>

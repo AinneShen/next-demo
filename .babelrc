@@ -9,6 +9,13 @@
           "components": "./components"
         }
       }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": 'css',
+      }
     ]
   ]
 }
