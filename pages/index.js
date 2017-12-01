@@ -49,10 +49,10 @@ export default class Index extends React.Component{
           <li onClick={()=>{Router.push("/charts?id=1","/c",{ shallow:true})}}>charts</li>
           <li><ActiveLink href="/about">About</ActiveLink></li>
           <li>
-            <Link href="/form">表单</Link>
+            <Link href="/form"><a>表单</a></Link>
           </li>
           <li>
-            <Link href="/selfForm">自写表单</Link>
+            <Link href="/selfForm"><a>自写表单</a></Link>
           </li>
           <li>
             <Link href="/dialog">

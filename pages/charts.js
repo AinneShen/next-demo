@@ -25,42 +25,13 @@ const Div = styled.div`
       color:red
     }
 `
-const afterRender = (chart) => {
-  console.log(chart);
-  var xAxis = chart.xAxis[0],
-      yAxis = chart.yAxis[0],
-      top = chart.plotTop + yAxis.height,
-      width = chart.chartWidth;
-
-  chart.renderer
-    .rect(0/*position on X-axis*/, top/*position on Y-axis*/, width/*width*/ , 41/*height*/, 0)
-    .attr({
-      'stroke-width': 0,
-      stroke: '#fff',
-      fill: '#fff',
-      zIndex: 3
-    })
-    .add();
-  chart.renderer
-    .rect(0/*position on X-axis*/, 0/*position on Y-axis*/, 40/*width*/ , top/*height*/, 0)
-    .attr({
-      'stroke-width': 0,
-      stroke: '#fff',
-      fill: '#fff',
-      zIndex: 3
-    })
-    .add();
-}
 const config = {
   chart:{
     height:495,
-    // plotBackgroundColor: '#006285',
-    backgroundColor: '#006285',
-    spacingTop: 40,
+    plotBackgroundColor: '#006285',
+    marginTop: 0
   },
   legend:{
-    // floating: true,
-    // y:30,
     layout: 'horizontal',
     align: 'center',
     verticalAlign: 'top',
@@ -81,15 +52,11 @@ const config = {
     text:''
   },
   xAxis: {
-    // type:"datetime",
     labels:{
       formatter: function() {
             return ('<span style="font-size:12px; color:#999;">' + ReactHighcharts.Highcharts.dateFormat('%Y/%m/%d', this.value) + '</span>');
           },
     },
-    // dateTimeLabelFormats: {
-    //     day: '%e of %b'
-    // },
     title: {
         text:''
     },
@@ -190,17 +157,12 @@ class He extends React.Component{
 }
 export default class Charts extends React.Component{
   static async getInitialProps({req}) {
-    // console.log(req);
     const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>>"+userAgent);
     return { userAgent }
   }
 
   constructor(props){
     super(props);
-  }
-  componentWillUnMount(){
-
   }
   render(){
     return(
@@ -210,7 +172,7 @@ export default class Charts extends React.Component{
       </Helmet>
         <He />
         Hello World {this.props.userAgent}
-        <ReactHighcharts domProps = {{id: 'charts-wrap'}} callback={afterRender} config = {config} />
+        <ReactHighcharts domProps = {{id: 'charts-wrap'}} /*callback={afterRender}*/ config = {config} />
       </Div>
     )
   }
