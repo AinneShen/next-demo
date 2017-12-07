@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 import Banner from 'components/Banner'
+import Banner2 from 'components/Banner/index2'
 
 const Div = styled.div`
   width:1200px;
@@ -19,6 +20,7 @@ export default class Index extends React.Component{
           <link rel="stylesheet" href="/static/slick/slick-theme.css"/>
         </Head>
         <Banner />
+        <Banner2 />
       </Div>
     )
   }
